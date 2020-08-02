@@ -1,0 +1,142 @@
+/* mobile first rules
+	-these get applied rigth away as soon as the page loads
+	-these should be your mobile-first design rules
+	-work up gradually with media queries to adapt tp larger layouts
+*/
+
+body {
+	font-family: Helvetica, Arial, sans-serif;
+	font-size: 36px;
+	/* 1em = 16px - relative unit of mesurement*/
+
+}
+
+
+.container {
+	margin: 0 auto;
+	background-color: #efefef;
+	display: flex;
+	flex-direction: column;
+	max-width: 1140px;
+	flex-wrap: wrap;
+
+}
+
+.background {
+	margin: 0 auto;
+	background-color: #efefef;
+	display: flex;
+	flex-direction: column;
+	max-width: 1140px;
+	flex-wrap: wrap;
+
+}
+
+.hidden {
+	display: none;
+}
+
+.box {
+	color: #fff;
+	border-radius: 5px;
+	padding: 50px;
+	text-align: center;
+	margin: 10px;
+	font-size: 1em;
+	flex-grow: 1;
+
+
+}
+
+.box2 {
+	background-color: red;
+
+}
+
+.box1 {
+	background-color: yellow;
+	height: 100px;
+	width: 200px;
+	margin-left: 400px;
+}
+
+.box3 {
+	background-color: blue;
+}
+
+.box4 {
+	background-color: orange;
+}
+
+.box5 {
+	background-color: blue;
+}
+
+
+
+/* handling handheld / mobile @landscape */
+
+@media screen and (min-width: 641px) {
+	.container{
+		flex-direction: row;
+
+	}
+
+	.box{
+		color: #fefefe;
+	}
+
+	.box1 {
+		background-color: blue;
+		height: 80px;
+
+	}
+
+	.box2 {
+		background-color: purple;
+		width: 800px;
+		height: 80px;
+
+	}
+}
+	.box3 {
+		background-color: grey;
+		display: block;
+		width: 1025px;
+		height: 400px;
+	}
+
+	.box4 {
+		background-color: brown;
+		display: block;
+		margin-top: -400px;
+		height: 150px;
+
+
+	}
+
+	.box5 {
+		background-color: black;
+		width: 50px;
+		height: 25px;
+
+	}
+
+	.box6 {
+		background-color: green;
+		width: 1000px;
+
+	}
+
+
+/* tablet @ portrait */
+
+/*@media screen and (min-width: 768px) {
+	.box{
+		background-color: red;
+		color: #fefefe;
+		width: 150px;
+		font-size: 3em;
+	}
+
+}*/
